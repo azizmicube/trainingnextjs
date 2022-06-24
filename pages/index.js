@@ -1,18 +1,18 @@
 import React, {useState} from 'react';
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import styles from '@/styles/Home.module.css'
 import dynamic from 'next/dynamic';
 
-const HelloComponents = dynamic(() => import("../components/hello"), {
+const HelloComponents = dynamic(() => import("@/components/hello"), {
   loading : () => <b>Loading...</b>
 });
 
-const DynamicSSRTrue = dynamic(() => import("../components/DynamicSSR"), {
+const DynamicSSRTrue = dynamic(() => import("@/components/DynamicSSR"), {
   ssr : true,
   loading : () => <b>Loading...</b>
 });
 
-const DynamicSSRFalse = dynamic(() => import("../components/DynamicSSR"), {
+const DynamicSSRFalse = dynamic(() => import("@/components/DynamicSSR"), {
   ssr : false,
   loading : () => <b>Loading...</b>
 });
@@ -34,7 +34,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Icube Trining <a href="https://nextjs.org">Next.js!</a>
+          Icube Training <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
         {/* <Link href={{pathname:"/blog"}}><a>Next Link</a></Link> */}

@@ -7,9 +7,9 @@ const HelloComponents = dynamic(() => import("../components/hello"), {
   loading : () => <b>Loading...</b>
 });
 
-// const DynamicSSRTrue = dynamic(() => import("../components/DynamicSsr"), {
-//   ssr : true
-// });
+const DynamicSSRTrue = dynamic(() => import("../components/DynamicSsr"), {
+  ssr : true
+});
 
 // const DynamicSSRFalse = dynamic(() => import("../components/DynamicSsr"), {
 //   ssr : false
@@ -37,10 +37,10 @@ const Home = () => {
 
         {/* <Link href={{pathname:"/blog"}}><a>Next Link</a></Link> */}
         
-        {/* <br></br>
+        <br></br>
           <DynamicSSRTrue/>
         <br></br>
-          <DynamicSSRFalse/>
+          {/* <DynamicSSRFalse/>
         <br></br> */}
 
         <button className="btn btn-primary" onClick={handleClick}>Show Hide Dynamic Import</button>

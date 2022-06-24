@@ -1,7 +1,6 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import Link from 'next/link'
 import dynamic from 'next/dynamic';
 
 const HelloComponents = dynamic(() => import("../components/hello"), {

@@ -1,7 +1,6 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import { useRouter } from 'next/router'
 import styles from '../styles/Home.module.css'
-import Link from 'next/link'
 
 const Custom404 = () => {
     const router = useRouter();

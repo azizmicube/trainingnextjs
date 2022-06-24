@@ -1,0 +1,15 @@
+.listContainer {
+    list-style:none;
+    text-align: center;
+}
+.listItem {
+    padding: 10px;
+    background-color: cornflowerblue;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: rgb(250, 251, 251);
+}
+
+.listItem a {
+    color: aliceblue;
+}

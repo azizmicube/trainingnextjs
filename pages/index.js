@@ -38,9 +38,9 @@ const Home = () => {
         {/* <Link href={{pathname:"/blog"}}><a>Next Link</a></Link> */}
         
         <br></br>
-          <DynamicSSRTrue/>
+          <DynamicSSRTrue ssrCondition={"True"}/>
         <br></br>
-          <DynamicSSRFalse/>
+          <DynamicSSRFalse ssrCondition={"False"}/>
         <br></br>
 
         <button className="btn btn-primary" onClick={handleClick}>Show Hide Dynamic Import</button>

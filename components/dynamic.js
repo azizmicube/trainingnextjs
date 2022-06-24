@@ -1,6 +1,6 @@
 import React from 'react'
 
-const DynamicSsr = () => {
+const dynamic = () => {
   return (
     <div>
         <div className="alert alert-info" role="alert">
@@ -10,4 +10,4 @@ const DynamicSsr = () => {
   )
 }
 
-export default DynamicSsr
+export default dynamic

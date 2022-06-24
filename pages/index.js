@@ -7,13 +7,13 @@ const HelloComponents = dynamic(() => import("../components/hello"), {
   loading : () => <b>Loading...</b>
 });
 
-const DynamicSSRTrue = dynamic(() => import("../components/DynamicSsr"), {
+const DynamicSSRTrue = dynamic(() => import("../components/dynamic"), {
   ssr : true
 });
 
-// const DynamicSSRFalse = dynamic(() => import("../components/DynamicSsr"), {
-//   ssr : false
-// });
+const DynamicSSRFalse = dynamic(() => import("../components/dynamic"), {
+  ssr : false
+});
 
 const Home = () => {
   const [showDynammic, setShowDynammic] = useState(false);
@@ -40,8 +40,8 @@ const Home = () => {
         <br></br>
           <DynamicSSRTrue/>
         <br></br>
-          {/* <DynamicSSRFalse/>
-        <br></br> */}
+          <DynamicSSRFalse/>
+        <br></br>
 
         <button className="btn btn-primary" onClick={handleClick}>Show Hide Dynamic Import</button>
         <br></br>

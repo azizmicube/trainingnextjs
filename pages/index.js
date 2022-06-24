@@ -7,14 +7,12 @@ const HelloComponents = dynamic(() => import("../components/hello"), {
   loading : () => <b>Loading...</b>
 });
 
-const DynamicSSRTrue = dynamic(() => import("../components/DynamicSsr"), {
-  ssr : true,
-  loading : () => <b>Loading...</b>
+const DynamicSSRTrue = dynamic(() => import("../components/DynamicSsr.js"), {
+  ssr : true
 });
 
-const DynamicSSRFalse = dynamic(() => import("../components/DynamicSsr"), {
-  ssr : false,
-  loading : () => <b>Loading...</b>
+const DynamicSSRFalse = dynamic(() => import("../components/DynamicSsr.js"), {
+  ssr : false
 });
 
 export default function Home() {

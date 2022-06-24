@@ -1,10 +1,9 @@
-import { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/dist/client/link';
 import styles from '@/styles/Home.module.css'
 import blogStyles from '@/styles/Blog.module.css'
-// import {blogs} from '../blog'
 
-const blog = () => {
+const Blog = () => {
 
     const [DataList, setDataList] = useState(null);
 
@@ -23,7 +22,7 @@ const blog = () => {
         return <ul className={blogStyles.listContainer}>
             {
                 DataList.map(blog => (
-                    <li className={blogStyles.listItem}>
+                    <li key={blog._id} className={blogStyles.listItem}>
                         <Link href={{pathname:"/blogdetail", query:{
                             name: blog.name,
                             profession: blog.profession,
@@ -48,4 +47,4 @@ const blog = () => {
   )
 }
 
-export default blog
+export default Blog

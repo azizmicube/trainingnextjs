@@ -1,9 +1,13 @@
 import React from 'react'
 
-const dynamicSSR = () => {
+const DynamicSSR = ({ssrCondition}) => {
   return (
-    <div>Load with dynamic SSR</div>
+    <div>
+        <div className="alert alert-info" role="alert">
+            Load with dynamic Import <strong>SSR {ssrCondition}</strong>
+        </div>
+    </div>
   )
 }
 
-export default dynamicSSR
+export default DynamicSSR

@@ -8,12 +8,12 @@ const HelloComponents = dynamic(() => import("../components/hello"), {
   loading : () => <b>Loading...</b>
 });
 
-const DynamicSSRTrue = dynamic(() => import("../components/dynamicSSR"), {
+const DynamicSSRTrue = dynamic(() => import("../components/DynamicSSR"), {
   ssr : true,
   loading : () => <b>Loading...</b>
 });
 
-const DynamicSSRFalse = dynamic(() => import("../components/dynamicSSR"), {
+const DynamicSSRFalse = dynamic(() => import("../components/DynamicSSR"), {
   ssr : false,
   loading : () => <b>Loading...</b>
 });
@@ -35,18 +35,19 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Icube Trining <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
-        <Link href={{pathname:"/blog"}}><a>Next Link</a></Link>
+        {/* <Link href={{pathname:"/blog"}}><a>Next Link</a></Link> */}
         
         <br></br>
-          <DynamicSSRTrue/> True
+          <DynamicSSRTrue ssrCondition={'True'}/>
         <br></br>
-          <DynamicSSRFalse/> False
+          <DynamicSSRFalse ssrCondition={'false'}/>
         <br></br>
 
         <button className="btn btn-primary" onClick={handleClick}>Show Hide Dynamic Import</button>
+        <br></br>
 
         {
            showDynammic && (<HelloComponents/>)

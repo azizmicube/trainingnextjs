@@ -2,7 +2,11 @@ import React from 'react'
 
 const hello = () => {
   return (
-    <div>Hello this is Dynamic Import</div>
+    <div>
+        <div className="alert alert-success" role="alert">
+            Load Alert Dynamic Import!
+        </div>
+    </div>
   )
 }
 

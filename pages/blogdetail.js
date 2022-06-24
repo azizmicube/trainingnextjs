@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 import Image from 'next/image'
 import Head from 'next/head'
 
-const blogdetail = () => {
+const Blogdetail = () => {
     const router = useRouter();
     const {query} = router;
     // const photoUrl = query.photoUrl;
@@ -59,4 +59,4 @@ const blogdetail = () => {
   )
 }
 
-export default blogdetail
+export default Blogdetail

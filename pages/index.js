@@ -3,17 +3,17 @@ import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import dynamic from 'next/dynamic';
 
-const HelloComponents = dynamic(() => import("@/components/hello"), {
+const HelloComponents = dynamic(() => import("../components/hello"), {
   loading : () => <b>Loading...</b>
 });
 
-const DynamicSSRTrue = dynamic(() => import("@/components/DynamicSsr"), {
- srsr : true,
+const DynamicSSRTrue = dynamic(() => import("../components/DynamicSsr"), {
+  ssr : true,
   loading : () => <b>Loading...</b>
 });
 
-const DynamicSSRFalse = dynamic(() => import("@/components/DynamicSsr"), {
-  srr : false,
+const DynamicSSRFalse = dynamic(() => import("../components/DynamicSsr"), {
+  ssr : false,
   loading : () => <b>Loading...</b>
 });
 

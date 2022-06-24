@@ -15,7 +15,7 @@ const DynamicSSRFalse = dynamic(() => import("../components/DynamicSsr"), {
   ssr : false
 });
 
-export default function Home() {
+const Home = () => {
   const [showDynammic, setShowDynammic] = useState(false);
 
   const handleClick = () => {
@@ -54,3 +54,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default Home

@@ -5,7 +5,7 @@ import { GET_CATEGORIES } from './schema'
 import styles from '@/styles/Home.module.css'
 
 
-const index = () => {
+const Index = () => {
     const {loading, error, data} = useQuery(GET_CATEGORIES)
 
 

@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { useQuery } from '@apollo/client'
 import { GET_CATEGORIES } from './schema'
 import styles from '@/styles/Home.module.css'
+import Image from 'next/image'
+
 
 
 const Index = () => {
@@ -28,6 +30,17 @@ const Index = () => {
                 data.categories.items.map (category => (
                     <li key={category.id}>
                         <Link href={`/categories/${category.id}`}><a>{category.name}</a></Link>
+                        <div>
+                            {
+                                category.image && <Image 
+                                    width={200}
+                                    height={200}
+                                    src={category.image}
+                                    placeholder="blur"
+                                    blurDataURL={category.image}
+                                />
+                            }
+                        </div>
                     </li> 
                 ))
             }

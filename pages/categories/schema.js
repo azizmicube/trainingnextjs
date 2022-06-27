@@ -1,4 +1,3 @@
-import React from "react"
 import {gql} from "@apollo/client"
 
 export const GET_CATEGORIES = gql`
@@ -7,6 +6,7 @@ export const GET_CATEGORIES = gql`
             items {
               id
               name
+              image
             }
             total_count
           }
@@ -36,6 +36,9 @@ export const GET_PRODUCT_BY_SKU = gql`
           ) {
             items {
                 name
+                image {
+                  url
+                }
                 price_range {
                   minimum_price {
                     final_price {

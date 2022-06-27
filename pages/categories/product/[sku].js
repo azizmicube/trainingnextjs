@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import { useQuery, useMutation } from '@apollo/client'
 import { GET_PRODUCT_BY_SKU, SUBSCRIBE } from '../schema'
 import styles from '@/styles/Home.module.css'
+import Image from 'next/image'
 
 
 const DetailProduct = () => {
@@ -50,6 +51,15 @@ const DetailProduct = () => {
             <h5><strong>Product Name : </strong> {data.products.items[0].name}</h5>
             <h5><strong>Price Range : </strong> Rp. {data.products.items[0].price_range.minimum_price.final_price.value} - Rp. {data.products.items[0].price_range.maximum_price.final_price.value}</h5>
             <h5><strong>Description : </strong> { ReactHtmlParser (data.products.items[0].description.html)}</h5>
+
+        <Image 
+                    width={200}
+                    height={200}
+                    src={data.products.items[0].image.url}
+                    placeholder="blur"
+                    blurDataURL={data.products.items[0].image.url}
+                />
+
         <br></br>
 
         <form onSubmit={handleSubscribe} >

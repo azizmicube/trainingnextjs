@@ -16,6 +16,21 @@ export const Navbar = () => {
             <li className="nav-item active">
               <Link href={{pathname:"/blog"}}><a className="nav-link">Avatar List</a></Link>
             </li>
+            <li className="nav-item active">
+              <Link href={{pathname:"/ssr"}}><a className="nav-link">SSR</a></Link>
+            </li>
+            <li className="nav-item active">
+              <Link href={{pathname:"/ssg"}}><a className="nav-link">SSG</a></Link>
+            </li>
+            <li className="nav-item active">
+              <Link href={{pathname:"/isg"}}><a className="nav-link">ISG</a></Link>
+            </li>
+            <li className="nav-item active">
+              <Link href={{pathname:"/csr"}}><a className="nav-link">CSR</a></Link>
+            </li>
+            <li className="nav-item active">
+              <Link href={{pathname:"/categories"}}><a className="nav-link">Categories</a></Link>
+            </li>
           </ul>
         </div>
       </nav>

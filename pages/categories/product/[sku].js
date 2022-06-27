@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import ReactHtmlParser from 'react-html-parser'; 
+import ReactHtmlParser from 'react-html-parser'
 import { useRouter } from 'next/router'
 import { useQuery, useMutation } from '@apollo/client'
 import { GET_PRODUCT_BY_SKU, SUBSCRIBE } from '../schema'
